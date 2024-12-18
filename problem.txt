@@ -1,0 +1,1 @@
+1. submit pe click karne pr pop up aana chahiye daya ke sath means backend se data aane ke bad popup
