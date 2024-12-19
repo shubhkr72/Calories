@@ -11,7 +11,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html', output=None)
+    return render_template('index.html', output=None,display='none')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -25,7 +25,7 @@ def predict():
     #make predictions
     predicted_burn=model.predict(final_features)
     output = float(predicted_burn[0])
-    return render_template('index.html',output=output)
+    return render_template('index.html',output=output,display='flex')
 
 if __name__=="__main__":
     app.run(debug=True)
